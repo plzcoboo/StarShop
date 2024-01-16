@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 export const HeaderWrap = styled.header`
-background:#1A237E;
-    .inner { height:120px; }
+background:#455A64;
+    .inner { height:80px; }
     h1 {
         position:absolute; left:0; top:50%; transform: translateY(-50%); 
         a {
             img {
-                width:180px;
+                width:150px;
             }
         }      
     }

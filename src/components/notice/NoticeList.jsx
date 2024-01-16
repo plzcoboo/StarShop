@@ -29,9 +29,9 @@ const NoticeList = () => {
             </colgroup>
             <thead>
                 <tr>
-                    <th>번호</th>
-                    <th>내용</th>
-                    <th>작성일</th>
+                    <th>Number</th>
+                    <th>Content</th>
+                    <th>Date Created</th>
                 </tr>
             </thead>
             <tbody>

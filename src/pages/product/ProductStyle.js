@@ -5,7 +5,7 @@ export const ProductWrap = styled.div`
     h2 {  margin-bottom:50px; font-weight:700; color:#E3F2FD}
 
     .cart-box { display: flex;flex-wrap: wrap;
-        article { width: 23%;padding: 20px; box-sizing: border-box; margin-bottom: 30px; text-align: center; border-radius : 20px; margin-right:32px; background-color:#5C6BC0;
+        article { width: 23%;padding: 20px; box-sizing: border-box; margin-bottom: 30px; text-align: center; border-radius : 20px; margin-right:32px; background-color:#37474F;
             div {margin-bottom: 25px;}
             img { width: 100%;  }
             h3 {font-size: 16px; margin-bottom: 10px; color:#80CBC4;}

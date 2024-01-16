@@ -40,7 +40,7 @@ const CartItem = ({item}) => {
     return (
         <article>
           <p>
-            <input type="checkbox" onChange={changeChk} checked={ischk} />
+            <input type="checkbox" onChange={changeChk} checked={ischk}/>
             <label htmlFor=""></label>
           </p>
           <img src={image}  alt={title} />

@@ -20,11 +20,11 @@ const Pagination = () => {
   return (
     <PaginationWrap>
       <div>
-        <button onClick={()=>dispatch(prevPage())}>{`<<`}</button>
+        <button onClick={()=>dispatch(prevPage())}>{`<`}</button>
         {
           arr.map((_,idx)=><button key={idx} className={currPage === (idx+1) ? 'on' :''} onClick={()=>dispatch(currentPage(idx+1))}>{idx+1}</button>)
         }
-        <button onClick={()=>dispatch(nextPage())}>{`>>`}</button>
+        <button onClick={()=>dispatch(nextPage())}>{`>`}</button>
       </div>
     </PaginationWrap>
   );

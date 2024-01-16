@@ -1,5 +1,15 @@
 import styled from 'styled-components'
 
+
+export const MainButton = styled.div`
+border: 1px solid #fff;
+width: 150px;
+height: 50px;
+box-sizing: border-box;
+padding: 15px;
+a{color: #fff;}
+`
+
 export const SpinnerWrap = styled.div`
 .spinner {
   position: fixed; z-index: 10; left: 0; top: 0;

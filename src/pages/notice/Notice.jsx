@@ -7,7 +7,7 @@ const Notice = () => {
     return (
         <NoticeWrap>
             <div className="inner">
-                <h2>게시판</h2>
+                <h2>Notice board</h2>
                 <NoticeList />
                 <Pagination />
             </div>

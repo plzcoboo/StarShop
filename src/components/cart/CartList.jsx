@@ -20,7 +20,7 @@ const CartList = () => {
     
     return (
         <CartListWrap>
-            <h2>장바구니</h2>
+            <h2>Cart</h2>
             <p>
             <input type="checkbox" checked={allCheckState} onChange={allChecking}/>
             <label htmlFor="">ALL</label>

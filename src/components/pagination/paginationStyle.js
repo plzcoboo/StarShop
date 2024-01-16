@@ -10,9 +10,9 @@ export const PaginationWrap  = styled.div`
             &:first-child { border:none }
             &:last-child { border:none }
             &.on {
-                border-color:tomato;
-                background:tomato;
-                color:#fff;
+                border-color:#78909C;
+                background:#78909C;
+                color:black;
             }
         }
     }

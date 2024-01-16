@@ -2,18 +2,18 @@ import styled from 'styled-components'
 
 export const NoticeListWrap  = styled.div` 
 
-.noticeTable { width: 100%; 
+.noticeTable { width: 100%; color:#E0E0E0;
     caption { position:absolute; left:0; top:0; text-indent:-9999px}
     .num { width: 10%; }
-    .title { width: auto; }
+    .title { width: auto;}
     .date { width: 15%; }
     th,  td{ height: 45px; vertical-align: middle; 
-        border: 1px solid #999; }
-    th { border-bottom: none; font-weight: 700; }   
+        border: 1px solid #E0E0E0;}
+    th { border-bottom: none; font-weight: 700;}   
     td{ text-align: center;
         &:nth-child(2){ text-align: left; padding-left: 20px; } 
-    }  
-
+    }
+    a{color:#E0E0E0;}
 } 
 
 `
