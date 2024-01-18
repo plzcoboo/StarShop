@@ -18,9 +18,9 @@ const GlobalStyle = createGlobalStyle`
   li { list-style:none;}
   img { vertical-align: top; }
   
-  .inner { width:1600px; margin:auto; box-sizing:border-box; position:relative }
+  .inner { width:1200px; margin:auto; box-sizing:border-box; position:relative }
   .main { width: 100%;}
-  .main h2 { text-align: center; font-size: 40px; margin-bottom: 50px; }
+  .main h2 { text-align: center; font-size: 40px; margin-bottom: 30px; }
   button { border:none; cursor: pointer;  }
 `
 

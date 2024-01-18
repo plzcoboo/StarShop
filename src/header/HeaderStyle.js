@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 export const HeaderWrap = styled.header`
-background:#455A64;
+background:#213067;
     .inner { height:80px; }
     h1 {
         position:absolute; left:0; top:50%; transform: translateY(-50%); 
         a {
             img {
-                width:150px;
+                width:120px;
             }
         }      
     }
@@ -20,14 +20,15 @@ background:#455A64;
 
 export const NavWrap = styled.nav`
    &.nav{ 
-    position: absolute; right:0;  top:50% ; transform: translateY(-50%); 
+    position: absolute; right:35%;  top:50% ; transform: translateY(-50%); 
     ul{
         display: flex;
+        .Cart{position:absolute; right: -60%;}
         li {
             margin-left:100px; position:relative ;
             a {
                 color: #E3F2FD;
-                font-size:18px; font-weight: 500;
+                font-size:15px; font-weight: 500;
                 transition:0.3s;
                 &:hover {
                     color:#64B5F6;

@@ -3,11 +3,13 @@ import styled from 'styled-components'
 
 export const MainButton = styled.div`
 border: 1px solid #fff;
-width: 150px;
-height: 50px;
+width: 100px;
+height: 40px;
 box-sizing: border-box;
-padding: 15px;
-a{color: #fff;}
+padding:8px;
+cursor: pointer;
+a{color: #fff; font-size:12px; font-weight:700}
+&:hover{background:#fff;a{color: #000; font-weight:700}}
 `
 
 export const SpinnerWrap = styled.div`

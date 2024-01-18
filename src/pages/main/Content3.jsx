@@ -1,22 +1,24 @@
 import React from 'react';
-import { Content3Style } from './ContentStyle';
 import { Link } from 'react-router-dom';
 import { MainButton } from '../../styled/Style';
+import { ContentStyle } from './ContentStyle';
 
 const Content3 = () => {
     return (
-        <Content3Style>
+        <div className='inner'>
+        <ContentStyle style={{marginTop:'100px'}}>
         <div className='text-box'>
             <div className='inner-box'>
-                <h2>Introducing the best product of 2023!</h2>
-                <span> Discover the top Star Wars merchandise of 2023 and make your purchase right now! Head over to buy it</span>
+                <h2>Experience the lightsaber that was once only seen in movies</h2>
+                <span>The lightsaber from the Star Wars movies is now available for sale on our product page, and it's selling like hotcakes!</span>
                 <MainButton className='go-shop'><Link>Go Shopping</Link></MainButton>
          </div>
         </div>
         <div className='img-box'>
-        <img src="./images/MainVis_4.jpeg" alt="" />
+        <img src="./images/MainVis_2.jpg" alt="" />
         </div>
-        </Content3Style>
+        </ContentStyle>
+        </div>
     );
 };
 
