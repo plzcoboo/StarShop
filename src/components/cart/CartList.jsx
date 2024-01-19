@@ -20,25 +20,41 @@ const CartList = () => {
     
     return (
         <CartListWrap>
-            <h2>Cart</h2>
-            <p>
+           {/*  <p>
             <input type="checkbox" checked={allCheckState} onChange={allChecking}/>
             <label htmlFor="">ALL</label>
-            </p>
+            </p> */}
+            <div className="title">
+            <h2>Cart</h2>
+            <div className="cart-remove">
+            <button onClick={()=>dispatch(allRemoveCart())}>Remove all</button>
+            <button onClick={()=>dispatch(removeSelectCart())}>Delete</button>
+            </div>
+            </div>
+            <div className="cart-con">
             <div className="cart-list">
-              {carts.map(item => <CartItem key={item.id}item={item}/>)}  
+                <>{carts.map(item => <CartItem key={item.id} item={item} Num={item.id}/>)}</>
             </div>
-            <div className="cart-bottom">
-                <p><strong></strong>
-                   <span>Total product : {chkCart.length}EA</span> 
+            <div className="cart-right">
+                <p>
+                   <span>total product : {chkCart.length}EA</span> 
                 </p>                
-                <p><strong></strong>
-                   <span>Total Price : {totalPrice}$</span> 
+                <p>
+                   <span>total Price : {totalPrice}$</span> 
                 </p>
+                <p>
+                   <span>discount amount : 0$</span> 
+                </p>
+                <p>
+                   <span>shipping fee : 0$</span> 
+                </p>
+                <p className="cart-Total">
+                   <span>Total</span> 
+                </p>
+                   <p className="C-T">{totalPrice}$</p> 
+                <button>Order</button>
             </div>
-            <button onClick={()=>navigate(`/product`)}>쇼핑하러가기</button>
-            <button onClick={()=>dispatch(allRemoveCart())}>전체삭제</button>
-            <button onClick={()=>dispatch(removeSelectCart())}>선택삭제</button>
+            </div>
         </CartListWrap>
     );
 };

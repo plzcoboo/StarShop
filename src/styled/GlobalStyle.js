@@ -3,11 +3,9 @@ import reset from 'styled-reset'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-  /* other styles */
   
   body {
     font-size: 16px;
-    /* line-height: 1.6; */
     font-family: 'Noto Sans KR', sans-serif;
     background: #000035;
   }
@@ -21,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   .inner { width:1200px; margin:auto; box-sizing:border-box; position:relative }
   .main { width: 100%;}
   .main h2 { text-align: center; font-size: 40px; margin-bottom: 30px; }
-  button { border:none; cursor: pointer;  }
+  button { border:none; cursor: pointer; }
 `
 
 export default GlobalStyle;
