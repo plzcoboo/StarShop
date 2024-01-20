@@ -50,7 +50,9 @@ const CartItem = ({item,Num}) => {
             <input type="checkbox" onChange={changeChk} checked={ischk} id={Num}/>
             <label htmlFor={Num}></label>
           </p>
+          <div className="product-img">
           <img src={image}  alt={title} />
+          </div>
           <div>
             <h3>
               {title}

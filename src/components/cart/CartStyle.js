@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const CartListWrap = styled.div`
+.product-img{background:#E3F2FD}
 margin-top: 100px;
 margin-bottom:100px;
 h3{margin-top:10px}
