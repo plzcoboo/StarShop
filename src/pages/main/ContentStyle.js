@@ -20,7 +20,7 @@ export const Content2Style = styled.section`
 box-sizing: border-box;
 padding: 150px;
 .Con-Text{width: 900px; margin:auto; text-align:center}
-color: white;
+color: #E3F2FD;
 `
 
 export const BannerStyle = styled.div`
@@ -31,7 +31,7 @@ export const Content4Style = styled.section`
 margin-top: 100px;
 display: flex;
 justify-content: space-evenly;
-color: #fff;
+color: #E3F2FD;
 p{line-height:25px; font-size:15px;}
 .title {margin-bottom:30px}
 margin-bottom: 100px;

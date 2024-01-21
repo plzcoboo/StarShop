@@ -36,19 +36,19 @@ const CustomerAdd = () => {
     return (
         <CustomerAddWrap>  
             <div className="inner">    
-                <h2> 고객문의 </h2>
+                <h2>FAQ</h2>
                 <form  className="customer-add" onSubmit={onSubmit}>
-                    <p>  <input type="text" placeholder="제목"  onChange={changeInput} name="title" value={title}/></p>
-                    <p>  <input type="text" placeholder="작성자" onChange={changeInput} name="name" value={name}/></p>
+                    <p>  <input type="text" placeholder="Title"  onChange={changeInput} name="title" value={title}/></p>
+                    <p>  <input type="text" placeholder="User" onChange={changeInput} name="name" value={name}/></p>
                     <p>  
                         <textarea cols="100" rows="10" 
-                        placeholder="문의하기"
+                        placeholder=""
                         onChange={changeInput} name="content" value={content} 
                         ></textarea></p>
                     <p>
-                        <button onClick={onGo}>목록으로</button>
-                        <button type="submit">저장하기</button>
-                        <button onClick={onGo}>취소하기</button>
+                        <button onClick={onGo}>List</button>
+                        <button type="submit">Save</button>
+                        <button onClick={onGo}>Cancel</button>
                     </p>
                 </form>
                 </div>       

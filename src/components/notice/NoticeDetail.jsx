@@ -20,7 +20,7 @@ const NoticeDetail = () => {
                 <p className="txt"> {content}</p>
                 <p className="date"> {date}</p>
             </div>
-            <button onClick={()=>navigate(`/notice`)}>목록으로</button>
+            <button onClick={()=>navigate(`/notice`)}>List</button>
           </div>
         </NoticeDetailWrap>
     );

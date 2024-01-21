@@ -4,6 +4,7 @@ import { FiInstagram } from "react-icons/fi";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
  
@@ -16,11 +17,11 @@ const Footer = () => {
                     <nav className="navi">
                         <div className="nav-title">More From Star Wars</div>
                         <ul className="brand-icon">
-                            <li><FaTiktok /></li>
-                            <li><FiInstagram /></li>
-                            <li><RiTwitterXFill /></li>
-                            <li><FaFacebook /></li>
-                            <li><FaYoutube /></li>
+                            <li><Link to={'https://www.tiktok.com/@starwars'} target="_blank"><FaTiktok /></Link></li>
+                            <li><Link to={'https://www.instagram.com/starwars/'} target="_blank"><FiInstagram /></Link></li>
+                            <li><Link to={'https://twitter.com/starwars'} target="_blank"><RiTwitterXFill /></Link></li>
+                            <li><Link to={'https://www.facebook.com/StarWars'} target="_blank"><FaFacebook /></Link></li>
+                            <li><Link to={'https://www.youtube.com/user/starwars'} target="_blank"><FaYoutube /></Link></li>
                         </ul>
                     </nav>
                 </div>

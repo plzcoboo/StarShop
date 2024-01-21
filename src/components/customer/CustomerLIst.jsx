@@ -31,17 +31,17 @@ const CustomerLIst = () => {
         </colgroup>
         <thead>
             <tr>
-                <th>번호</th>
-                <th></th>              
-                <th>작성자</th>
-                <th>작성일</th>
+                <th>Number</th>
+                <th>Content</th>              
+                <th>User</th>
+                <th>Date Created</th>
             </tr>
         </thead>
         <tbody>
              {currentPosts.map(item => <CustomerItem key={item.id} item={item}/>)}
        </tbody>
        </table>
-            <p><button onClick={()=>navigate('customeradd')}>글 작성</button></p>
+            <p><button onClick={()=>navigate('customeradd')}>Create</button></p>
        </CustomerLIstWrap>
     );
 };

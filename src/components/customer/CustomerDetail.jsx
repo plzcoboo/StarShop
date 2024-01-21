@@ -25,7 +25,7 @@ const CustomerDetail = () => {
     return (
         <CustomerDetailWrap >
             <div className="inner">
-            <h2> 문의 글 </h2>
+            <h2> FAQ </h2>
             <div className="con">
             <h3>{title}</h3>
                            
@@ -34,9 +34,9 @@ const CustomerDetail = () => {
                 <p className="date">{date}</p>
             </div>
             <p>
-                <button onClick={()=>navigate('/customer')}>목록으로</button>
-                <button onClick={onEdit}>수정하기</button>
-                <button onClick={onDel}>삭제하기</button>
+                <button onClick={()=>navigate('/customer')}>List</button>
+                <button onClick={onEdit}>Edit</button>
+                <button onClick={onDel}>Delete</button>
             </p> 
             </div>           
           </CustomerDetailWrap>
