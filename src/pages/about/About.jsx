@@ -7,14 +7,6 @@ import { SiRedux } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
-
-
-
-
-
-
-
-
 const About = () => {
     return (
         <AboutWrap>
@@ -49,7 +41,7 @@ const About = () => {
                 </div>
                 <div className="box-right">
                     <div className="video-box">
-                    <video src="/images/Star Wars Intro.mp4" autoPlay={true} loop={true} muted={true}></video>
+                    <video src="./images/Star Wars Intro.mp4" autoPlay={true} loop={true} muted={true}></video>
                     </div>
                     <div className="title-content">
                     <p className="title">Contact</p>
