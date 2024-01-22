@@ -19,7 +19,7 @@ import CustomerEdit from "./components/customer/CustomerEdit";
 const App = () => {
   return (
     <>
-    <HashRouter>
+    <BrowserRouter>
         <GlobalStyle /> 
         <Routes>
           <Route path="/" element={<Layout/> }>
@@ -48,7 +48,7 @@ const App = () => {
         
           {/* <Route path="*" element={<NotFiles />}/> */}
         </Routes>
-     </HashRouter>
+     </BrowserRouter>
     </>
   );
 };
