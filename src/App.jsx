@@ -14,6 +14,7 @@ import About from "./pages/about/About";
 import CustomerDetail from "./components/customer/CustomerDetail";
 import CustomerAdd from "./components/customer/CustomerAdd";
 import CustomerEdit from "./components/customer/CustomerEdit";
+import LoginMain from "./pages/login/LoginMain";
  
 
 const App = () => {
@@ -24,8 +25,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout/> }>
           <Route index element={<Main />}/>
-          <Route path="/join" element={<Main />}/>
-          <Route path="/login" element={<Login />}/>
+          <Route path="/Main" element={<Main />}/>
           <Route path="/logout" element={<Logout />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/product" element={<Product />}/>
@@ -45,6 +45,8 @@ const App = () => {
           </Route>
           
           </Route>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/loginMain" element={<LoginMain/>}/>
           <Route path="*" element={<NotFiles />}/>
         </Routes>
      </BrowserRouter>

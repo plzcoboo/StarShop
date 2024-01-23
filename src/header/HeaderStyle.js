@@ -19,12 +19,12 @@ background:#213067;
 
 
 export const NavWrap = styled.nav`
-svg{font-size:30px; position:absolute; left:-30px; top: -10px;}
    &.nav{ 
     position: absolute; right:35%;  top:50% ; transform: translateY(-50%); 
     ul{
         display: flex;
-        .Cart{position:absolute; right: -60%;}
+        .Cart{position:absolute; right: -60%;svg{font-size:30px; position:absolute; left:-30px; top: -10px;}}
+        .login {position:absolute; right:-50%; top:0px; svg{font-size:30px; position:absolute; left:-30px; top: -10px;}}
         li {
             margin-left:100px; position:relative ;
             a {
