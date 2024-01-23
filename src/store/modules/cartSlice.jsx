@@ -21,15 +21,7 @@ export const cartSlice = createSlice({
     totalCart:(state, action) => {
       state.chkCart = state.carts.filter(item => item.ischk === true)
       state.cartTotal = state.chkCart.reduce((acc, cur) => acc + cur.price , 0)
-    },
-    sortCart:(state,action) => {
-      if(action.payload !== '') {
-       state.products.sort((a,b) => a[action.payload] > b[action.payload] ? 1 : -1)
-      }   
-    },    
-    resetCart:(state, action) => {
-      state.products = productData
-    },
+    },  
     cartsEdit:(state, action) => {
       let newItem = state.carts.find(item => item.id === action.payload.id)
       let original = productData.find(item => item.id === action.payload.id)

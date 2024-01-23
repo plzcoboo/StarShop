@@ -7,7 +7,6 @@ const ProductSearch = ({NewProductData,SetNewProductData}) => {
     const [text, setText] = useState('')
     const [category, setCategory] = useState('')
     let {products} = useSelector(state => state.cart)
-    const dispatch = useDispatch()
     const textRef = useRef()
     const onSort = (e) => {
         e.preventDefault();
@@ -35,6 +34,10 @@ const ProductSearch = ({NewProductData,SetNewProductData}) => {
             SetNewProductData(products.filter(item => item.title.toLowerCase().includes(text.toLowerCase()))) 
         }
     }
+
+    let onReset = () => {
+        SetNewProductData([...products]);
+    }
   
     return (
         <ProductSearchWrap>
@@ -50,7 +53,7 @@ const ProductSearch = ({NewProductData,SetNewProductData}) => {
                     <option value="price">가격</option>
                     <option value="category">카테고리</option>
                 </select>
-                <span onClick={()=>dispatch(resetCart())}>Reset</span>
+                <span onClick={onReset}>Reset</span>
                </p>
             </form>
             
