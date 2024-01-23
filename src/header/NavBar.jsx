@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"; 
 import { NavWrap, TopMenu } from "./HeaderStyle";
 import { useSelector } from "react-redux";
+import { HiMiniShoppingCart } from "react-icons/hi2";
+
 
 const NavBar = () => {
     const {carts} = useSelector(state => state.cart)
@@ -14,7 +16,7 @@ const NavBar = () => {
                 <li><Link to={"/customer"}>Customer</Link></li>
                 
                 <li className="Cart"><Link to="/cart">
-                        Cart <span> {carts.length} </span>
+                <HiMiniShoppingCart /><span> {carts.length} </span>
                     </Link> </li>         
                             
             </ul>

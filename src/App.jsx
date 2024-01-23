@@ -45,8 +45,7 @@ const App = () => {
           </Route>
           
           </Route>
-        
-          {/* <Route path="*" element={<NotFiles />}/> */}
+          <Route path="*" element={<NotFiles />}/>
         </Routes>
      </BrowserRouter>
     </>

@@ -11,7 +11,7 @@ const Content3 = () => {
             <div className='inner-box'>
                 <h2>Experience the lightsaber that was once only seen in movies</h2>
                 <span>The lightsaber from the Star Wars movies is now available for sale on our product page, and it's selling like hotcakes!</span>
-                <MainButton className='go-shop'><Link>Go Shopping</Link></MainButton>
+                <MainButton className='go-shop'><Link to={'/product'}>Go Shopping</Link></MainButton>
          </div>
         </div>
         <div className='img-box'>

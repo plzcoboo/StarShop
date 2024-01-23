@@ -54,7 +54,7 @@ const Product = () => {
         <div className="inner">
         <h2>StarWars shop</h2>
 
-        <ProductSearch />
+        <ProductSearch NewProductData={productData} SetNewProductData={setproductData}/>
 
         <div className="cart-box">
                     {productData.map(item => <ProductItem key={item.id} item={item}/>)}

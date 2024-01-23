@@ -19,6 +19,7 @@ background:#213067;
 
 
 export const NavWrap = styled.nav`
+svg{font-size:30px; position:absolute; left:-30px; top: -10px;}
    &.nav{ 
     position: absolute; right:35%;  top:50% ; transform: translateY(-50%); 
     ul{

@@ -24,12 +24,9 @@ export const cartSlice = createSlice({
     },
     sortCart:(state,action) => {
       if(action.payload !== '') {
-        state.products.sort((a,b) => a[action.payload] > b[action.payload] ? 1 : -1)
+       state.products.sort((a,b) => a[action.payload] > b[action.payload] ? 1 : -1)
       }   
     },    
-    searchCart:(state,action) => {
-     state.products = productData.filter(item => item.title.toLowerCase().includes(action.payload.toLowerCase()))
-    },
     resetCart:(state, action) => {
       state.products = productData
     },
