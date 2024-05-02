@@ -13,7 +13,7 @@ const LoginMain = () => {
             <div className='Login-right'>
                 <div className='Login-box'>
                     <h2>Get started</h2>
-                    <div><Link to={'/login'}><button>Login</button></Link><Link to={'/join'}><button>Sign up</button></Link></div>
+                    <div className='button-box'><Link to={'/login'}><button>Login</button></Link><Link to={'/join'}><button>Sign up</button></Link></div>
                 </div>
             </div>
         </LoginMainWrap>

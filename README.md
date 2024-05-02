@@ -1,35 +1,136 @@
-# 사이트 홈페이지 제작 (개인작업)
-              
-# 스타워즈 쇼핑몰
+## [초기화면]
+- 접속시 갤러리 형식 화면이 나타납니다.
 
-<a href="깃/dist/" target="_blank">
-<img src="./public/images/sw_logo.jpg" width="150px">
-</a>
+| 초기화면 |
+|----------|
+<img src="./public/readme/first.jpg">
 
-<br>
-<br>
+- 배포 URL : https://aquamarine-lily-2fe788.netlify.app
 
-# 사용 기술  
+## 프로젝트 소개
 
-- [X] React
-- [X] Styled-Components
-- [X] Router 
-- [X] Redux-toolkit
+- 평소 좋아하는 테마를 정해 REACT 를 이용하여 이미지 갤러리를 만들었습니다.
+
+## 개발 환경
+
+- Front : HTML, React, styled-components , Redux , Router
+- Back-end : 로컬 API 사용
+- 버전 및 이슈관리 : Github
+- 서비스 배포 환경 : Github pages
 
 
 ## 프로젝트 주요 기능
-1. 회원가입, 로그인
-2. 장바구니
-3. 정렬
-4. 검색
-5. 게시판
+1. 장바구니
+2. 정렬
+3. 검색
+4. 게시판
+   
+## 개발 기간
+
+- 일주일 소요 
 
 ## 프로젝트 작업 순서
 1. 자료조사 및 사이트 참고
 2. 디자인 계획 및 마크업
 3. React  / Styled-Components / Redux-toolkit 사용
 
-# 프로젝트 기능 구현
+## 프로젝트 구조
+
+```
+📦src
+ ┣ 📂assets
+ ┃ ┗ 📂api
+ ┃ ┃ ┣ 📜cartdata.jsx
+ ┃ ┃ ┣ 📜customerdata.js
+ ┃ ┃ ┗ 📜noticedata.js
+ ┣ 📂components
+ ┃ ┣ 📂cart
+ ┃ ┃ ┣ 📜CartEmpty.jsx
+ ┃ ┃ ┣ 📜CartItem.jsx
+ ┃ ┃ ┣ 📜CartList.jsx
+ ┃ ┃ ┗ 📜CartStyle.js
+ ┃ ┣ 📂customer
+ ┃ ┃ ┣ 📜CustomerAdd.jsx
+ ┃ ┃ ┣ 📜CustomerDetail.jsx
+ ┃ ┃ ┣ 📜CustomerEdit.jsx
+ ┃ ┃ ┣ 📜CustomerItem.jsx
+ ┃ ┃ ┣ 📜CustomerLIst.jsx
+ ┃ ┃ ┗ 📜CustomerStyle.js
+ ┃ ┣ 📂notfile
+ ┃ ┃ ┣ 📜NotFiles.jsx
+ ┃ ┃ ┗ 📜NotFileStyle.js
+ ┃ ┣ 📂notice
+ ┃ ┃ ┣ 📜NoticeDetail.jsx
+ ┃ ┃ ┣ 📜NoticeItem.jsx
+ ┃ ┃ ┣ 📜NoticeList.jsx
+ ┃ ┃ ┗ 📜NoticeStyle.js
+ ┃ ┣ 📂pagination
+ ┃ ┃ ┣ 📜Pagination.jsx
+ ┃ ┃ ┗ 📜paginationStyle.js
+ ┃ ┣ 📂product
+ ┃ ┃ ┣ 📜ProductItem.jsx
+ ┃ ┃ ┣ 📜ProductSearch.jsx
+ ┃ ┃ ┗ 📜ProductStyle.js
+ ┃ ┣ 📜Layout.jsx
+ ┃ ┗ 📜Spinner.jsx
+ ┣ 📂footer
+ ┃ ┣ 📜Footer.jsx
+ ┃ ┗ 📜FooterStyle.js
+ ┣ 📂header
+ ┃ ┣ 📜Header.jsx
+ ┃ ┣ 📜HeaderStyle.js
+ ┃ ┗ 📜NavBar.jsx
+ ┣ 📂hooks
+ ┃ ┣ 📜useAxios.jsx
+ ┃ ┣ 📜useInput.jsx
+ ┃ ┗ 📜설명.txt
+ ┣ 📂pages
+ ┃ ┣ 📂about
+ ┃ ┃ ┣ 📜About.jsx
+ ┃ ┃ ┗ 📜AboutStyle.js
+ ┃ ┣ 📂cart
+ ┃ ┃ ┣ 📜Cart.jsx
+ ┃ ┃ ┗ 📜ProjectStyle.js
+ ┃ ┣ 📂customer
+ ┃ ┃ ┣ 📜Customer.jsx
+ ┃ ┃ ┗ 📜CustomerStyle.js
+ ┃ ┣ 📂login
+ ┃ ┃ ┣ 📜Join.jsx
+ ┃ ┃ ┣ 📜Login.jsx
+ ┃ ┃ ┣ 📜LoginMain.jsx
+ ┃ ┃ ┣ 📜LoginStyle.js
+ ┃ ┃ ┗ 📜Logout.jsx
+ ┃ ┣ 📂main
+ ┃ ┃ ┣ 📜Banner.jsx
+ ┃ ┃ ┣ 📜Content1.jsx
+ ┃ ┃ ┣ 📜Content2.jsx
+ ┃ ┃ ┣ 📜Content3.jsx
+ ┃ ┃ ┣ 📜Content4.jsx
+ ┃ ┃ ┣ 📜ContentStyle.js
+ ┃ ┃ ┣ 📜Main.jsx
+ ┃ ┃ ┗ 📜MainStyle.js
+ ┃ ┣ 📂notice
+ ┃ ┃ ┣ 📜Notice.jsx
+ ┃ ┃ ┗ 📜NoticeStyle.js
+ ┃ ┗ 📂product
+ ┃ ┃ ┣ 📜Product.jsx
+ ┃ ┃ ┗ 📜ProductStyle.js
+ ┣ 📂store
+ ┃ ┣ 📂modules
+ ┃ ┃ ┣ 📜authSlice.jsx
+ ┃ ┃ ┣ 📜cartSlice.jsx
+ ┃ ┃ ┣ 📜customerSlice.jsx
+ ┃ ┃ ┣ 📜noticeSlice.jsx
+ ┃ ┃ ┗ 📜paginationSlice.jsx
+ ┃ ┗ 📜index.jsx
+ ┣ 📂styled
+ ┃ ┣ 📜GlobalStyle.js
+ ┃ ┗ 📜Style.js
+ ┣ 📜App.jsx
+ ┗ 📜main.jsx
+```
+
+## 프로젝트 기능 구현
 
 ### 1) 제품페이지
 
@@ -67,3 +168,6 @@
 * 체크 박스 체크시 해당 제품만 삭제 가능하도록 기능 구현 (구현예정 => 완료)
 * 장바구니 전체삭제 체크박스 선택삭제 기능 구현 (구현예정 => 완료) 
 <img src="./public/readme/Cart_readme.gif">
+
+
+

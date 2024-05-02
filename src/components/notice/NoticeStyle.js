@@ -9,7 +9,7 @@ export const NoticeListWrap  = styled.div`
     .date { width: 15%; }
     th,  td{ height: 45px; vertical-align: middle; 
         border: 1px solid #E3F2FD;}
-    th { border-bottom: none; font-weight: 700;}   
+    th { border-bottom: none; font-weight: 700; background:#E3F2FD; color:#000035;}   
     td{ text-align: center;
         &:nth-child(2){ text-align: left; padding-left: 20px; } 
     }

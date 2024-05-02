@@ -37,6 +37,7 @@ h2{img{
 }
 .Login-right{width:60%;height:100vh; position: relative; text-align: center;
 .Login-box{position:absolute; left:50%;top:50%; transform:translate(-50%,-50%);
+.button-box{display:flex;}    
 button {width:250px; height:50px; background:none; border:1px solid #E3F2FD; color:#E3F2FD}
 button:first-child {margin-right:10px;}
 h2 {color: #E3F2FD; font-size:40px; margin-bottom:50px}
