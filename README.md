@@ -18,6 +18,7 @@
 - 버전 및 이슈관리 : Github
 - 서비스 배포 환경 : Github pages
 
+<img src="./public/readme/about.jpg">
 
 ## 프로젝트 주요 기능
 1. 장바구니
