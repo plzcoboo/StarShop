@@ -3,9 +3,9 @@
 
 | 초기화면 |
 |----------|
-<img src="./public/readme/first.jpg">
+<img src="./public/readme/first.png">
 
-- 배포 URL : https://aquamarine-lily-2fe788.netlify.app
+- 배포 URL : https://plzcoboo.github.io/StarShop/dist
 
 ## 프로젝트 소개
 
