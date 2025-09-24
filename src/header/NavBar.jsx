@@ -1,34 +1,74 @@
-import { Link } from "react-router-dom"; 
-import { NavWrap, TopMenu } from "./HeaderStyle";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { HiMiniShoppingCart } from "react-icons/hi2";
-import { BiSolidLogIn } from "react-icons/bi";
-
-
+import { HiBars3, HiMiniShoppingCart } from "react-icons/hi2";
+import { BiSolidLogIn, BiLogOut } from "react-icons/bi";
+import { NavWrap } from "./HeaderStyle";
 
 const NavBar = () => {
-    const {carts} = useSelector(state => state.cart)
-    return (
-        <>
-        <NavWrap className="nav">
-            <ul>             
-                <li><Link to={"/about"}>About</Link></li>
-                <li><Link to={"/product"}>Product</Link></li>
-                <li><Link to={"/notice"}>Notice</Link></li>
-                <li><Link to={"/customer"}>Customer</Link></li>
-                <li className="login"><Link to="/loginMain"><BiSolidLogIn />Login</Link></li>
-                <li className="Cart"><Link to="/cart"><HiMiniShoppingCart /><span>{carts.length}</span></Link></li>                        
-            </ul>
-        </NavWrap>
+  const { carts } = useSelector((state) => state.cart);
+  const { authed, user } = useSelector((state) => state.auth);
+  const [open, setOpen] = useState(false);
 
-       {/*  <TopMenu className="top-menu">
-             <li><Link to={"/join"}>회원가입</Link></li>
-                
-                    <li><Link to={"/logout"}>로그아웃</Link></li>
-                    <li><Link to={"/login"}>로그인</Link></li>
-       </TopMenu>       */}
-        </>
-    );
+  const toggleMenu = () => {
+    setOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
+  };
+
+  const navItems = [
+    { to: "/about", label: "About" },
+    { to: "/product", label: "Product" },
+    { to: "/notice", label: "Notice" },
+    { to: "/customer", label: "Customer" },
+  ];
+
+  return (
+    <NavWrap className={`nav ${open ? "open" : ""}`}>
+      <button
+        type="button"
+        className="menu-toggle"
+        onClick={toggleMenu}
+        aria-label="메뉴 토글"
+        aria-expanded={open}
+        aria-controls="primary-navigation"
+      >
+        <HiBars3 />
+      </button>
+      <ul id="primary-navigation">
+        {navItems.map(({ to, label }) => (
+          <li key={to}>
+            <NavLink to={to} onClick={closeMenu}>
+              {label}
+            </NavLink>
+          </li>
+        ))}
+        {authed && (
+          <li className="welcome">
+            <span>{user?.username ?? ""} 님</span>
+          </li>
+        )}
+        <li className="login">
+          <Link to={authed ? "/logout" : "/loginMain"} onClick={closeMenu}>
+            {authed ? <BiLogOut /> : <BiSolidLogIn />}
+            {authed ? "Logout" : "Login"}
+          </Link>
+        </li>
+        <li className="cart">
+          <Link to="/cart" onClick={closeMenu}>
+            <span className="sr-only">Cart</span>
+            <HiMiniShoppingCart />
+            <span className="count" aria-live="polite">
+              {carts.length}
+            </span>
+          </Link>
+        </li>
+      </ul>
+    </NavWrap>
+  );
 };
 
 export default NavBar;
+

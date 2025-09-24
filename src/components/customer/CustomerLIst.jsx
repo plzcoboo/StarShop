@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { CustomerLIstWrap } from "./CustomerStyle";
 import CustomerItem from "./CustomerItem";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { addData } from "../../store/modules/paginationSlice";
 
 const CustomerLIst = () => {
@@ -21,18 +21,19 @@ const CustomerLIst = () => {
    
    return (
         <CustomerLIstWrap>
+        <div className="table-scroll">
         <table className="customerTable">
         <caption>게시판</caption>
         <colgroup>
             <col className="num" />
-            <col className="title" />               
-            <col className="name" />               
-            <col className="date" />               
+            <col className="title" />
+            <col className="name" />
+            <col className="date" />
         </colgroup>
         <thead>
             <tr>
                 <th>Number</th>
-                <th>Content</th>              
+                <th>Content</th>
                 <th>User</th>
                 <th>Date Created</th>
             </tr>
@@ -41,6 +42,7 @@ const CustomerLIst = () => {
              {currentPosts.map(item => <CustomerItem key={item.id} item={item}/>)}
        </tbody>
        </table>
+       </div>
             <p><button onClick={()=>navigate('customeradd')}>Create</button></p>
        </CustomerLIstWrap>
     );

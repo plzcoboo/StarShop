@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ProductSearchWrap } from './ProductStyle';
-import { useDispatch, useSelector } from 'react-redux';
-import { resetCart, searchCart, sortCart } from '../../store/modules/cartSlice';
+import { useSelector } from 'react-redux';
 
 const ProductSearch = ({NewProductData,SetNewProductData}) => {
     const [text, setText] = useState('')

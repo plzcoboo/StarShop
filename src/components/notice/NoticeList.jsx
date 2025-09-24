@@ -20,12 +20,13 @@ const NoticeList = () => {
 
     return (
         <NoticeListWrap>
+        <div className="table-scroll">
         <table className="noticeTable">
             <caption>게시판</caption>
             <colgroup>
                 <col className="num" />
-                <col className="title" />               
-                <col className="date" />               
+                <col className="title" />
+                <col className="date" />
             </colgroup>
             <thead>
                 <tr>
@@ -40,6 +41,7 @@ const NoticeList = () => {
                   }
            </tbody>
         </table>
+        </div>
         </NoticeListWrap>
     );
 };

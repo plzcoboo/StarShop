@@ -41,7 +41,13 @@ const About = () => {
                 </div>
                 <div className="box-right">
                     <div className="video-box">
-                    <video src="./images/Star Wars Intro.mp4" autoPlay={true} loop={true} muted={true}></video>
+                    <video
+                      src="./images/Star Wars Intro.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    ></video>
                     </div>
                     <div className="title-content">
                     <p className="title">Contact</p>

@@ -1,5 +1,5 @@
 import NoticeList from "../../components/notice/NoticeList";
-import Pagination from "../../components/pagination/pagination";
+import Pagination from "../../components/pagination/Pagination";
 import { NoticeWrap } from "./NoticeStyle";
 
 
