@@ -1,6 +1,6 @@
  
 import CustomerLIst from '../../components/customer/CustomerLIst';
-import Pagination from '../../components/pagination/pagination';
+import Pagination from '../../components/pagination/Pagination';
 import { CustomerWrap } from './CustomerStyle';
  
  

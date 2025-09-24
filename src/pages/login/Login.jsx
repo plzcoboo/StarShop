@@ -1,54 +1,79 @@
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { LoginWrap  } from "./LoginStyle";
-import { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
 import { login } from "../../store/modules/authSlice";
+import { LoginWrap } from "./LoginStyle";
 
 
  
  
 const Login = () => {
     const [user, setUser] = useState({
-        email:'', password:''
-    })
-    const emailRef = useRef()
-    const {email,password} = user;
-    
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
+        email: "",
+        password: "",
+    });
+    const { email, password } = user;
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const { authed } = useSelector((state) => state.auth);
+
+    useEffect(() => {
+        if (authed) {
+            navigate("/");
+        }
+    }, [authed, navigate]);
 
     const onSubmit = (e) => {
-        e.preventDefault()
-        if(!email || !password) return
-            dispatch(login(user))
-            navigate('/main')
+        e.preventDefault();
+        if (!email || !password) return;
+
+        dispatch(login(user));
         setUser({
-            email:'',
-            password:''
-        })
-    }
+            email: "",
+            password: "",
+        });
+    };
 
     const onInput = (e) => {
-        const {name,value} = e.target 
-        setUser({...user,[name]:value})
-    }
+        const { name, value } = e.target;
+        setUser({ ...user, [name]: value });
+    };
 
     return (
         <LoginWrap>
             <div className="inner">
             <div className="Login-form">
-            <div><Link to={'/main'}><img src="./images/sw_logo.jpg" alt="" /></Link></div>
+            <div>
+              <Link to={"/"}>
+                <img src="./images/sw_logo.jpg" alt="" />
+              </Link>
+            </div>
             <h2>Login</h2>
-            <form onClick={onSubmit}>
+            <form onSubmit={onSubmit}>
                 <p>
-                    <label>이메일</label>  
-                    <input type="email"   placeholder="" name='email' value={email} onChange={onInput}/>
-                </p>                
-                <p>
-                    <label>비밀번호</label>  
-                    <input type="password"   placeholder="" name='password' value={password} onChange={onInput}/>
+                    <label>이메일</label>
+                    <input
+                      type="email"
+                      placeholder=""
+                      name="email"
+                      value={email}
+                      onChange={onInput}
+                    />
                 </p>
-                <p><button type="submit">Login</button></p>
+                <p>
+                    <label>비밀번호</label>
+                    <input
+                      type="password"
+                      placeholder=""
+                      name="password"
+                      value={password}
+                      onChange={onInput}
+                    />
+                </p>
+                <p>
+                  <button type="submit">Login</button>
+                </p>
             </form>
             </div>
             </div>
