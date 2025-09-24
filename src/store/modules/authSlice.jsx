@@ -10,15 +10,19 @@ export const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    login: (state,action) => {
-        const {email, password} = action.payload
-        const findEmail = state.dataList.find(item => item.email === email)
-        const findpassword = state.dataList.find(item => item.password === password)
-        if(findpassword === undefined || findEmail === undefined) {alert('일치하는 정보가 없습니다')}
-        if( findEmail.password === password) {
-          state.user = findEmail
-          state.authed = true
+    login: (state, action) => {
+        const { email, password } = action.payload;
+        const matchedUser = state.dataList.find((item) => item.email === email);
+
+        if (!matchedUser || matchedUser.password !== password) {
+            alert('일치하는 정보가 없습니다');
+            state.user = null;
+            state.authed = false;
+            return;
         }
+
+        state.user = matchedUser;
+        state.authed = true;
     },
     logout:(state,action) =>{
         state.user = null

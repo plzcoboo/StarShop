@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom"; 
-import { NavWrap, TopMenu } from "./HeaderStyle";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import { BiSolidLogIn } from "react-icons/bi";
+import { NavWrap } from "./HeaderStyle";
 
 
 
